@@ -11,7 +11,7 @@ RUN npm install
 RUN npm install oas3-tools
 RUN npm install cors 
 RUN npm install mongodb@5.7.0
-RUN npx -p @contrast/agent --no contrast-transpile index.js
+RUN npm install @contrast/agent --no-optional
 # RUN npm install @sendgrid/mail
 
 
