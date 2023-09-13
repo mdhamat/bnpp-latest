@@ -17,6 +17,6 @@ RUN npm install @contrast/agent --no-optional
 
 # Bundle app source
 COPY . .
-USER node
+#USER node
 EXPOSE 8080
 CMD ["node", "-r", "@contrast/agent", "index.js"]
