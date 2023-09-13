@@ -19,4 +19,4 @@ RUN npm install @contrast/agent --no-optional
 COPY . .
 USER node
 EXPOSE 8080
-CMD [“node”, “-r”, “@contrast/agent”, “index.js”]
+CMD ["node", "-r", "@contrast/agent", "index.js"]
