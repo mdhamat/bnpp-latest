@@ -7,7 +7,10 @@ WORKDIR /app
 COPY package*.json ./
 COPY 87ca6778-6d9d-11e9-b6bc-be2dba81101c ./
 #USER node
-RUN npm install && RUN npm install oas3-tools && RUN npm install cors && RUN npm install mongodb@5.7.0
+RUN npm install 
+RUN npm install oas3-tools
+RUN npm install cors 
+RUN npm install mongodb@5.7.0
 RUN npx -p @contrast/agent --no contrast-transpile index.js
 # RUN npm install @sendgrid/mail
 
