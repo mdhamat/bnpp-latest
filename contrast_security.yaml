@@ -17,7 +17,7 @@ api:
   url: https://app.contrastsecurity.com/Contrast
   user_name: agent_142bb017-de7e-4af7-b5b9-f0782aa6d369@Ibm
 application:
-  group: qrocgroup
+  group: "qroc : IBM Cloud SIEM for ISVs (broker only)"
   metadata: "bU=;contactEmail=" # metadata for your app. Example, bU=test-BU-here;contactEmail=testibm@ibm.com
   name: qroc # application name. can set any value
   tags: # OPTIONAL; can set any value
