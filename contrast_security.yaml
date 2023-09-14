@@ -8,3 +8,5 @@ agent:
     grpc: true
 assess: 
   enable_lazy_tracking: false
+application:
+  group: "qroc : IBM Cloud SIEM for ISVs (broker only)"
