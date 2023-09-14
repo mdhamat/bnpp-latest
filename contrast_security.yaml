@@ -9,4 +9,4 @@ agent:
 assess: 
   enable_lazy_tracking: false
 application:
-  group: qroc
+  group: "qroc : IBM Cloud SIEM for ISVs (broker only)"
