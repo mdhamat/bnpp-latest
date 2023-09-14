@@ -1,12 +1,48 @@
-api: 
-  url: https://app.contrastsecurity.com/Contrast
+# api: 
+#   url: https://app.contrastsecurity.com/Contrast
+#   api_key: vgy5soZn15wnVPHH539pF8F7niofbl4N
+#   service_key: EMODO7ZF2MWAP798
+#   user_name: agent_142bb017-de7e-4af7-b5b9-f0782aa6d369@Ibm
+# agent: 
+#   service: 
+#     grpc: true
+# assess: 
+#   enable_lazy_tracking: false
+# application:
+#   group: "qroc : IBM Cloud SIEM for ISVs (broker only)"
+
+api:
   api_key: vgy5soZn15wnVPHH539pF8F7niofbl4N
   service_key: EMODO7ZF2MWAP798
+  url: https://app.contrastsecurity.com/Contrast
   user_name: agent_142bb017-de7e-4af7-b5b9-f0782aa6d369@Ibm
-agent: 
-  service: 
-    grpc: true
-assess: 
-  enable_lazy_tracking: false
 application:
   group: "qroc : IBM Cloud SIEM for ISVs (broker only)"
+  metadata: "bU=;contactEmail=" # metadata for your app. Example, bU=test-BU-here;contactEmail=testibm@ibm.com
+  name: demoProj # application name. can set any value
+  tags: # OPTIONAL; can set any value
+server:
+  name: localhost # can change to any value
+  environment: DEVELOPMENT # valid values are `DEVELOPMENT`, `QA`, `PRODUCTION`
+agent:
+  logger:
+    level: INFO # valid values are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
+    path: ./logs/contrast_agent.log # location to store the log file
+    stdout: false # enabling this will display all logs information in the console/ terminal. Useful for Dockerfile approach
+    roll_size: 100M # file size is in MB. Agent will attempt to prevent the log file from being larger than this size.
+    backups: 10 # set a number of backup files. `0` to disable
+  security_logger:
+    level: ERROR # valid values are `ERROR`, `WARN`, `INFO`, `DEBUG`, and `TRACE`.
+    path: ./logs/contrast_security.log # location to store the log file
+  service:
+    enable: true # set to `false` will disallow to start the service and effectively disable the agent
+    host: localhost
+    port: 30555
+    grpc: true
+    logger:
+      level: INFO # valid values are `OFF`, `FATAL`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`, and `ALL`.
+      path: ./logs/contrast_service.log # location to store the log file
+protect:
+  enable: false # set to `true` if you want to enable PROTECT on your server
+assess:
+  enable: true # set to `false` if you want to disable ASSESS on your server
