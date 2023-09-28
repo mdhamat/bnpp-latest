@@ -14,9 +14,9 @@
   "private": true,
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
-    "connect": "^3.2.0",
+    "connect": "^3.7.0",
     "cors": "^2.8.5",
-    "js-yaml": "^3.3.0",
-    "mongodb": "^5.7.0"
+    "js-yaml": "^4.1.0",
+    "mongodb": "^6.1.0"
   }
 }

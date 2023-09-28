@@ -250,11 +250,11 @@ module.exports.serviceInstanceUpdateUsingPATCH =
           console.log("Response inside then", response);
           await client.connect();
           const dbo = client.db("mydb");
-
+          const newPlanId = body.plan_id
           var updated_fields = {
-            plan_id: body.plan_id,
+            plan_id: newPlanId,
           };
-          const filter = { instance_id: instance_id };
+          const filter = { instance_id: { $eq: instance_id } };
           const updateOperation = {
             $set: updated_fields,
           };
