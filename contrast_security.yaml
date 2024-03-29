@@ -46,3 +46,5 @@ protect:
   enable: false # set to `true` if you want to enable PROTECT on your server
 assess:
   enable: true # set to `false` if you want to disable ASSESS on your server
+inventory:
+ analyze_libraries: false
